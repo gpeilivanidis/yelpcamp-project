@@ -1,0 +1,161 @@
+@media (min-width: 481px){
+
+    // home page - search
+    .container-welcome{
+        max-inline-size: 70%;
+
+        a{
+            display: block;
+        }
+    }
+
+    input[type="search"]{
+        inline-size: 60%;
+    }
+
+    .btn-search{
+        display: inline-block;
+        inline-size: calc(40% - 8px);
+    }
+
+    .welcome-card{
+        padding: 50px;
+    }
+
+    .main-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    // add-comment page and forms
+    .container-form{
+        inline-size: 75%;
+    }
+
+    // signup login
+    .card-review{
+        padding: calc(var(--margin)*2.5) calc(var(--margin)*2);
+    }
+
+}
+
+@media (min-width: 769px){
+    .hide{
+        display: none;
+        overflow: hidden;
+    }
+
+    .container{
+        inline-size: 70%;
+    }
+
+    .landing{
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows: 69px minmax(auto,100%);
+
+        .banner{
+            grid-column: 2/3;
+            grid-row: span 2;
+        }
+
+        main{
+            grid-column: 1/2;
+            grid-row-end: -1; 
+            display: flex;
+            place-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        header{
+            grid-row-start: 1;
+            grid-column: 1/2;
+            block-size: min-content;
+        }
+    }
+
+    .container-welcome{
+        inline-size: 50%;
+    }
+
+    .btn-search{
+        inline-size: auto;
+    }
+
+    .main-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    // individual-camp page
+    .individual-grid{
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 50% 50%;
+        column-gap: calc(var(--margin) * 2);
+
+        section:first-child{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        section:nth-child(2){
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        section:nth-child(3){
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+    }
+
+    // forms
+    .container-form{ 
+        inline-size: 50%;
+        margin: 0 auto;
+    }
+    form{
+        h2{
+            display: block;
+            inline-size: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    // login signup
+    .login-signup-container{
+        display: grid;        
+        grid-template-columns: 55% 45%;
+        inline-size: 100%;
+        margin: 0;
+
+        .header{
+            inline-size: 80%;
+            margin-inline: auto;
+        }
+
+        .container-form{
+            inline-size: 80%;
+            margin-inline-end: auto;
+        }
+
+        form{
+            h2{
+                display: block;
+                inline-size: 80%;
+                margin-inline-end: auto;
+            }
+        }
+
+        section:nth-child(2){
+            block-size: 100%;
+            inline-size: 100%;
+            padding: 0;
+            
+            .card-review{
+                block-size: 100%;
+                inline-size: 100%;
+                display: flex;
+                flex-flow: column;
+                place-content: center;
+                // align-items: center;
+            }
+        }
+    }
+}

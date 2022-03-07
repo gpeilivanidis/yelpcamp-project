@@ -1,0 +1,149 @@
+@import 'reset';
+@import 'config';
+@import 'buttons';
+@import 'cards';
+@import 'utilities';
+@import 'forms';
+
+// font
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: $font-family, 'FontAwesome';
+    font-size: $font-size;
+    word-spacing: $word-spacing;
+}
+
+h1{
+    @include header(2.25em, 1);
+}
+h2{
+    @include header(2.75em, 1.12);
+}
+h3{
+    @include header(1.5em , 1.25);
+}
+h4{
+    @include header(1.25em, 1.37);
+}
+h5{
+    @include header();
+}
+h6{
+    @include header(1em, 1.5, 500);
+}
+
+p{
+    @include para();
+}
+
+a{
+    @include para();
+}
+
+.header{
+    padding-block: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a{
+        text-decoration: none;
+        margin-inline-end: $margin;
+
+        &:last-child{
+            margin-inline: 0;
+        }
+    }
+}
+
+.header-left, .header-right{
+    display: flex;
+    align-items: center;
+}
+
+section{
+    // works better as padding
+    padding-block: $margin;
+}
+
+// landing page
+
+
+.partners{
+    display: flex;
+    padding-block-end: $margin;
+}
+
+// home page - search page
+.main-grid{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: repeat(auto-fill, minmax(auto,1fr));
+    gap: $margin;
+}
+
+// individual camp page
+.uploader{
+    font-style: italic;
+}
+
+.flex-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-title-margin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block-start: $margin;
+}
+
+.individual-grid{
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.comment{
+    border-block-end: 1px solid $border-color;
+    padding-block: $margin;
+
+    &:first-child{
+        padding-block-start: 0;
+    }
+}
+
+.map{
+    inline-size: 100%;
+    block-size: 400px;
+}
+
+// signup login
+.special-link{
+    color: hsl(191, 100%, 45%);
+    font-weight: 700;
+}
+
+.user{
+    display: flex;
+    padding-block-start: $margin;
+    img{
+        margin-inline-end: 10px;
+    }
+    .user-title{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        h5{
+            padding: 0;
+        }
+        p{
+            padding: 0;
+        }
+    }
+}
+
+@import 'responsive';

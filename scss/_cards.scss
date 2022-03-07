@@ -1,0 +1,58 @@
+@mixin card($rad: $radius){
+    border-radius: $rad;
+    inline-size: 100%;
+    border: 1px solid $border-color;
+}
+
+
+// home page - search
+.welcome-card{
+    @include card();
+    padding: 30px;
+    border: none;
+}
+
+.card-item{
+    @include card();
+    padding: calc(var(--padding) * 3);
+
+    img{
+        border-radius: $radius;
+        inline-size: 100%;
+    }
+    h5{
+        padding-block: calc(var(--padding) * 2) 0;
+    }
+    p{
+        padding-block: 0 calc(var(--padding) * 2);
+    }
+}
+
+// individual camp page
+.card-individual{
+    @include card();
+    padding: calc(var(--margin)*1.5);
+
+    img{
+        inline-size: 100%;
+        border-radius: $radius;
+    }
+}
+
+.card-comments{
+    @include card();
+    padding: calc(var(--margin)*1.5);
+}
+
+.card-map{
+    @include card();
+    padding: calc(var(--margin)*1.5);
+
+}
+
+// login signup
+.card-review{
+    @include card();
+    border: none;
+    padding: calc(var(--margin)*2) $margin;
+}

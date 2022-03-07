@@ -1,0 +1,43 @@
+.container{
+    inline-size: 90%;
+    margin: 0 auto;
+}
+
+.container-link{
+    display: inline-block;
+}
+
+.checkmark{
+    display: flex;
+    align-items: center;
+    img{
+        margin-inline-end: 4px;
+        display: inline;
+        max-block-size: $font-size;
+    }
+}
+
+.special-bg{
+    background-color: $special-color;
+}
+
+.link-active{
+    font-weight: 700;
+}
+
+@mixin header($size: 1em, $line-height: 1.5, $weight: bold, $color: $primary-color, $pad: $padding, $max-width: $text-width){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    padding-block: $pad;
+    max-inline-size: $max-width;
+    line-height: $line-height;
+}
+
+@mixin para($size: 1em, $weight: medium, $color: $basic-color, $pad: $padding, $max-width: $text-width){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    padding-block: $pad;
+    max-inline-size: $max-width;
+}

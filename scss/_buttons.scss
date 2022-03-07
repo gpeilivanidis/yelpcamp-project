@@ -1,0 +1,59 @@
+@mixin btn($bg: $primary-color, $color: $secondary-color, $mar: $margin, $pad: 13px 20px, $rad: $radius){
+    background-color: $bg;
+    color: $color;
+    border-radius: $rad;
+    padding: $pad;
+    margin-block-start: $mar;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+.btn{
+    @include btn();
+}
+
+.btn-menu{
+    @include btn($special-color,black,0, 0);
+    block-size: 2.2em;
+    inline-size: 2.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-search{
+    @include btn();
+    inline-size: 100%;
+    margin-block: calc(var(--margin)/2) $margin;
+    border: 2px solid black;
+}
+
+.btn-cta-card{
+    @include btn($secondary-color, $primary-color);
+    border: 1px solid $border-color;
+    inline-size: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.btn-comment{
+    @include btn();
+    display: inline-flex;
+    align-items: center;
+    padding: 17px 24px;
+    img{
+        block-size: 1.5em;
+        display: inline;
+        margin-inline-end: $padding;
+    }
+}
+
+.btn-logout{
+    @include btn(transparent, $basic-color, 0, 0, 0);
+    display: inline;
+    margin-inline-start: $margin;
+    font-weight: 500;
+}

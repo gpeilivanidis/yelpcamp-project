@@ -1,0 +1,43 @@
+@mixin input( $bg: $input-color, $color: $basic-color, $rad: $radius){
+    background-color: $bg;
+    color: $color;
+    border-radius: $rad;
+    border: none;
+    inline-size: 100%;
+    padding: 13px 20px;
+
+    &::placeholder{
+        color: lightgrey;
+    }
+}
+
+textarea{
+    @include input();
+    resize: none;
+}
+
+input{
+    @include input($secondary-color);
+    border: 2px solid $border-color;
+    margin-block-start: calc(var(--margin)/2);
+}
+
+label{
+    display: block;
+    margin-block-start: calc(var(--margin)/2);
+    
+    &:first-of-type{
+        margin-block-start: $margin;
+    }
+}
+
+form{
+    padding-block-end: $margin;
+    input{
+        @include input();
+    }
+
+    input[type="submit"]{
+        margin-block-end: $margin;
+    }
+}

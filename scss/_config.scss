@@ -1,0 +1,43 @@
+:root{
+    // text
+    --font-family: 'Archivo';
+    --font-size: 1rem;
+    --text-width: 75ch;
+    --word-spacing: 1px;
+    
+    // colors
+    --primary-color: black;
+    --secondary-color: white;
+    --basic-color: #5a5a5a;
+    --input-color: #f7f7f7;
+    --special-color: #f8f5f0;
+    --border-color: hsl(0, 0%, 80%);
+
+    // spacing
+    --padding: 5px;
+    --margin: 20px;
+
+    // border
+    --radius: 3px;
+}
+
+// text
+$font-family: var(--font-family);
+$font-size: var(--font-size);
+$text-width: var(--text-width);
+$word-spacing: var(--word-spacing);
+
+// colors
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$basic-color: var(--basic-color);
+$input-color: var(--input-color);
+$special-color: var(--special-color);
+$border-color: var(--border-color);
+
+// spacing
+$padding: var(--padding);
+$margin: var(--margin);
+
+// border
+$radius: var(--radius);

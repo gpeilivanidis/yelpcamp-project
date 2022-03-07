@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.13.0/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.13.0/build/ol.js"></script>
+    <title>YelpCamp | Individual Campground</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="container">
+
+            <div class="header">
+
+                <div class="header-left">
+
+                    <a href="../index.html" class="container-link">
+                        <img src="../images/Logo.svg" alt="logo" title="YelpCamp">
+                    </a>
+    
+                    <a href="../sub-pages/home.html"><p>Home</p></a>
+
+                </div>
+                
+                <button class="btn-menu hide">
+
+                    <img src="../images/icons/Hamburger Menu.svg" alt="menu button">
+
+                </button>
+
+                <div class="header-right">
+
+                    <p class="link-active">johndoe_91</p>
+
+                    <button class="btn-logout">Logout</button>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </header>
+
+    <main>
+
+        <div class="container individual-grid">
+
+            <section>
+
+                <div class="card-individual">
+
+                    <img src="../images/Camp Images/Compressed Images/Mount Ulap.jpg" alt="Mount Ulap">
+
+                    <div class="flex-title-margin">
+                        <h4>Mount Ulap</h4>
+
+                        <h6>$104.99/night</h6>
+                    </div>
+
+                    <p>
+                        Mount Ulap is a 7.7 kilometer moderately trafficked point-to-point trail located near Tuba, Benguet, Philippines that offers the chance to see wildlife and is rated as moderate. The trail is primarily used for hiking.
+                    </p>
+
+                    <p class="uploader">
+                        Submitted by Andrew Mike
+                    </p>
+                    
+                </div>
+            
+            </section>
+            
+            <section>
+    
+                <div class="card-comments">
+
+                    <div class="comment">
+                        
+                        <div class="flex-title">
+
+                            <h5>Adam Jones</h5>
+
+                            <p>13h ago</p>
+                            
+                        </div>
+                        
+                        <p>
+                            Honestly one of the best experiences ever, took us a while to figure out how to get there but it was amazing!
+                        </p>
+                        
+                    </div>
+
+                    <div class="comment">
+                        
+                        <div class="flex-title">
+
+                            <h5>Isaac Dylan</h5>
+
+                            <p>1 day ago</p>
+                            
+                        </div>
+                        
+                        <p>
+                            Travelling changes you as a person, you gain  more perspective, this is the perfect spot to do that.
+                        </p>
+                        
+                    </div>
+
+                    <div class="comment">
+                        
+                        <div class="flex-title">
+
+                            <h5>Hudson Luca</h5>
+
+                            <p>3 days ago</p>
+                            
+                        </div>
+                        
+                        <p>
+                            Definitely recommend going there, not too far and not a lot of people to ruin the experience.
+                        </p>
+                        
+                    </div>
+
+                    <a href="../sub-pages/addComment.html" class="btn-comment"><img src="../images/icons/Chat Bubble.svg" alt="chat icon"> Leave a Review</a>
+                    
+                </div>
+                
+            </section>
+            
+            <section>
+    
+                <div class="card-map">
+
+                    <div id="map" class="map"></div>
+                    
+                </div>
+                
+            </section>
+            
+        </div>
+        
+    </main>
+    
+    <footer>
+
+        <div class="container">
+
+            <div class="header">
+
+                <a href="../index.html" class="container-link">
+                    <img src="../images/Logo.svg" alt="logo" title="YelpCamp">
+                </a>
+                
+            </div>
+            
+        </div>
+        
+    </footer>
+    
+    <script type="text/javascript">
+        var map = new ol.Map({
+          target: 'map',
+          layers: [
+            new ol.layer.Tile({
+              source: new ol.source.OSM()
+            })
+          ],
+          view: new ol.View({
+            center: ol.proj.fromLonLat([37.41, 8.82]),
+            zoom: 50
+          })
+        });
+    </script>
+</body>
